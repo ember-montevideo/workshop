@@ -6,10 +6,8 @@ var books = [
   { title: '1984', author: 'Orwell' }
 ];
 
-var ApplicationRoute = Ember.Route.extend({
+export default Ember.Route.extend({
   model: function() {
     return books;
   }
 });
-
-export default ApplicationRoute;
