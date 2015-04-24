@@ -2,7 +2,7 @@
 
 <ul>
   {{#each model as |book index|}}
-    <li><strong>{{book.title}}</strong> - {{book.author}} - {{#link-to 'book' index}}detalles{{/link-to}}</li>
+    <li>{{book-details book=book}} - {{#link-to 'book' index}}detalles{{/link-to}}</li>
   {{/each}}
 </ul>
 
