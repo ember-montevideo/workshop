@@ -7,7 +7,12 @@ export default Ember.Route.extend({
 
   actions: {
     createBook: function(book) {
-      // books.addObject(book);
+      book.author = this.store.createRecord('author', book.author);
+
+      book.author.save().then(() => {
+        book = this.store.createRecord('book', book);
+        book.save();
+      });
     }
   }
 });
