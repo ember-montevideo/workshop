@@ -1,8 +1,8 @@
 <h1>Lista de lectura</h1>
 
 <ul>
-  {{#each book in model}}
-    <li><strong>{{book.title}}</strong> - {{book.author}}</li>
+  {{#each model as |book index|}}
+    <li><strong>{{book.title}}</strong> - {{book.author}} - {{#link-to 'book' index}}detalles{{/link-to}}</li>
   {{/each}}
 </ul>
 
