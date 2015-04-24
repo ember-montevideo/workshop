@@ -9,5 +9,11 @@ var books = [
 export default Ember.Route.extend({
   model: function() {
     return books;
+  },
+
+  actions: {
+    createBook: function(book) {
+      books.addObject(book);
+    }
   }
 });
